@@ -1,1 +1,1 @@
-# bmi-calculator-swift
+# BMI Calculator Swift
