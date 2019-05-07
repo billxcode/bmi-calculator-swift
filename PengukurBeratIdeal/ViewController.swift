@@ -16,6 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var hasilKeseluruhanLabelOutlet: UILabel!
     @IBOutlet weak var emojiResult: UILabel!
     
+    
+    @IBOutlet var labels: [UILabel]!
+    
+    enum stateMode {
+        case light
+        case dark
+    }
+    
     var beratSekarang: Float = 1
     var tinggiSekarang: Float = 1
     
@@ -26,16 +34,28 @@ class ViewController: UIViewController {
         
         beratSliderOutlet.minimumValue = 1
         beratSliderOutlet.maximumValue = 200
+        getLabels(colorMode: .black)
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func changeTheme(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 1 {
-            view.backgroundColor = .gray
-        }else{
-            view.backgroundColor = .white
+    func getLabels(colorMode: UIColor){
+        for label in labels {
+            label.textColor = colorMode
         }
+    }
 
+    @IBAction func changeTheme(_ sender: UISegmentedControl) {
+        var colorState: UIColor = .white
+        
+        if sender.selectedSegmentIndex == 1 {
+            colorState = .black
+            view.backgroundColor = .gray
+            getLabels(colorMode: .white)
+        }else{
+            colorState = .white
+            view.backgroundColor = .white
+            getLabels(colorMode: .black)
+        }
     }
     
     @IBAction func tinggiAction(_ sender: UISlider) {

@@ -60,6 +60,7 @@
                                     <segment title="Light"/>
                                     <segment title="Dark"/>
                                 </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <connections>
                                     <action selector="changeTheme:" destination="BYZ-38-t0r" eventType="valueChanged" id="NdI-ys-sXV"/>
                                 </connections>
@@ -125,11 +126,17 @@
                         <outlet property="hasilKeseluruhanLabelOutlet" destination="rDf-Iw-DUY" id="xpH-yr-YgM"/>
                         <outlet property="hasilTinggiLabelOutlet" destination="dh0-SS-pcm" id="Hjl-bX-eId"/>
                         <outlet property="tinggiSliderOutlet" destination="0u2-sQ-sif" id="CG4-aW-IkP"/>
+                        <outletCollection property="labels" destination="bDQ-2U-V0F" collectionClass="NSMutableArray" id="IzE-Qc-nn8"/>
+                        <outletCollection property="labels" destination="dh0-SS-pcm" collectionClass="NSMutableArray" id="eaj-BG-0c8"/>
+                        <outletCollection property="labels" destination="jyp-Gg-0ED" collectionClass="NSMutableArray" id="WOQ-Mq-jPW"/>
+                        <outletCollection property="labels" destination="D9B-2J-ozX" collectionClass="NSMutableArray" id="YLf-7O-bWu"/>
+                        <outletCollection property="labels" destination="rDf-Iw-DUY" collectionClass="NSMutableArray" id="P3e-C0-1Xp"/>
+                        <outletCollection property="labels" destination="qoD-fd-PE2" collectionClass="NSMutableArray" id="AaP-Jd-Tzi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="261" y="129"/>
         </scene>
     </scenes>
 </document>
